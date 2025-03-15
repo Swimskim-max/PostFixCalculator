@@ -1,46 +1,51 @@
 import java.util.LinkedList;
+import java.util.List;
 
+/**
+ * Stack implementation for doubles using LinkedList.
+ *
+ * @author David Sanchez
+ */
 public class StackOfDoubles implements Stack<Double> {
 
     LinkedList<Double> ll = new LinkedList<>();
 
+    /**
+     * Checks if stack is empty.
+     *
+     * @return true if empty
+     */
     public boolean isEmpty() {
-        //returns true is this collections contains no elements
         return ll.isEmpty();
     }
 
     /**
-     * Push item onto top of stack.
+     * Pushes value onto stack.
      *
-     * @param val
+     * @param val value to push
      */
     @Override
     public void push(Double val) {
         ll.push(val);
-
     }
 
     /**
-     * Pop the item from the top of the stack and return it.
+     * Pops value from stack.
      *
+     * @return top value
      */
     @Override
     public Double pop() {
-        /*
-        Pops an element from the stack represented by this list.
-        In other words, removes and returns the
-        first element of this list.
-         */
         return ll.pop();
     }
 
     /**
-     * Return the top item on the stack without removing it.
+     * Peeks at top value.
+     *
+     * @return top value without removing
      */
     @Override
     public Double peek() {
-        //Retrieves but does now remove first element of this list.or null is list is empty
         return ll.peek();
     }
-
 }
